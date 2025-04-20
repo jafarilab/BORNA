@@ -1,3 +1,12 @@
+#
+#  This code returns "0" for nodes that have no inbound edges.
+#  For instance,
+#    A -> B
+#  becomes
+#    A, 0
+#    B, A
+#
+
 library(gtools)
 
 #########################
