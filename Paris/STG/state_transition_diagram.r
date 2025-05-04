@@ -14,15 +14,14 @@
 library(BoolNet)
 library(igraph)
 
-# Set working directory
+# Set working directory 
 setwd("Path\\to\\your\\directory")
 
-# Convert a numeric state vector into a compact string.
 vector_to_state <- function(state_vector) {
   paste(state_vector, collapse = "")
 }
 
-# Function to generate valid states based on fixed gene constraints.
+
 generate_valid_states <- function(net, fixed_constraints) {
   genes <- net$genes
   possible_values <- lapply(genes, function(gene) {
@@ -48,11 +47,11 @@ txt_files <- list.files(pattern = "\\.txt$")
 for (file_name in txt_files) {
   cat("Processing network:", file_name, "\n")
   
-  # Load the network
+  # Load the network from file
   net <- loadNetwork(file_name)
   print(net)
   
-  # Read network description for fixed constraints
+  # Read network description to extract fixed constraints
   network_df <- read.csv(file_name, header = TRUE, stringsAsFactors = FALSE)
   fixed_constraints <- list()
   for (j in seq_len(nrow(network_df))) {
@@ -66,7 +65,7 @@ for (file_name in txt_files) {
   cat("Fixed constraints for this network:\n")
   print(fixed_constraints)
   
-  # Skip network if all genes fixed to 0
+  # Skip network if all genes are fixed to 0
   if (length(fixed_constraints) == length(net$genes) &&
       all(unlist(fixed_constraints) == 0)) {
     cat("Skipping network", file_name, "All gene values = 0.\n\n")
@@ -77,7 +76,7 @@ for (file_name in txt_files) {
   att <- getAttractors(net, "synchronous", returnTable = TRUE)
   print(att)
   
-  # Generate valid initial states
+  # Generate valid initial states based on fixed constraints
   valid_states <- generate_valid_states(net, fixed_constraints)
   cat("Valid states:\n")
   state_labels <- sapply(valid_states, vector_to_state)
@@ -98,7 +97,7 @@ for (file_name in txt_files) {
     print(path)
   }
   
-  # Build edge list for igraph
+  # Build edge list for igraph based on the state-to-attractor mapping
   edge_list <- c()
   cat("State mapping:\n")
   for (init_state in names(state_mapping)) {
@@ -109,15 +108,8 @@ for (file_name in txt_files) {
   
   g <- graph(edges = edge_list, directed = TRUE)
   
-  # Optional interactive plot
-  plot(g,
-       vertex.shape = "circle",
-       vertex.size = 40,
-       vertex.color = "lightblue",
-       vertex.label.color = "black",
-       edge.arrow.size = 0.5,
-       main = paste("State-to-Attractor Mapping for", file_name))
   
+  # Save results for later PDF generation
   all_results[[file_name]] <- list(
     network = net,
     attractors = att,
@@ -131,10 +123,11 @@ for (file_name in txt_files) {
 }
 
 # ------------------------------
-# Save all graphs to a PDF
+# Save all graphs and network info to a PDF 
 # ------------------------------
 pdf("State_to_Attractor_Graphs.pdf", onefile = TRUE, width = 12, height = 8)
-for(nm in names(all_results)) {
+for (nm in names(all_results)) {
+  
   par(mfrow = c(1, 2), mar = c(4, 4, 4, 2))
   
   g <- all_results[[nm]]$graph
@@ -144,12 +137,14 @@ for(nm in names(all_results)) {
        vertex.color = "lightblue",
        vertex.label.color = "black",
        edge.arrow.size = 0.5,
-       main = paste("State-to-Attractor Mapping:\n", nm))
+       main = paste("State-to-Attractor Mapping:", nm))
   
-  plot.new()
+  
+  plot.new()  
   network_info <- all_results[[nm]]$description
   info_text <- paste(capture.output(print(network_info)), collapse = "\n")
   text(0, 1, info_text, adj = c(0, 1), cex = 0.8)
 }
 dev.off()
-cat("All graphs have been saved to 'State_to_Attractor_Graphs.pdf'\n")
+cat("All graphs along with network info have been saved to 'State_to_Attractor_Graphs.pdf'\n")
+
