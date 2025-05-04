@@ -7,41 +7,66 @@
 #    B, A
 #
 
-library(gtools)
+
+
+library(gtools)     
+library(digest)     
+library(combinat)   
 
 #########################
-# 1. Hash Generator
+# 1. Matrix Hash Generator for edges
 #########################
+
 get_canonical_matrix_hash <- function(mat) {
   n <- nrow(mat)
-  perms <- permutations(n = n, r = n, v = 1:n)
-  
-  hash_variants <- apply(perms, 1, function(p) {
-    permuted_mat <- mat[p, p]
-    paste(permuted_mat, collapse = ",")
+  perms <- combinat::permn(n)  
+  hash_variants <- sapply(perms, function(p) {
+    permuted_mat <- mat[p, p, drop = FALSE]
+    paste(as.vector(permuted_mat), collapse = ",")
   })
-  
-  return(min(hash_variants))  
+  return(min(hash_variants))
 }
 
 #########################
-# 2. Adjacency Matrices
+# 2. Adjacency Matrix Generation 
 #########################
-generate_adjacency_matrices_efficient <- function(n) {
-  possible_values <- c(-1, 0, 1) # -1 for inhibitory,  0 for no connections, 1 for activating
-  num_cells <- n * n
-  all_combinations <- expand.grid(rep(list(possible_values), num_cells))  
+
+generate_adjacency_matrices_hashed <- function(n) {
+  total_edges <- n * n
+  total_graphs <- 3^total_edges
+  cat("Total graphs to generate:", total_graphs, "\n")
   
-  canonical_hashes <- new.env(hash = TRUE, parent = emptyenv())  
+  
+  int_to_base3 <- function(num, len) {
+    base3 <- integer(len)
+    for (i in 1:len) {
+      base3[i] <- num %% 3
+      num <- num %/% 3
+    }
+    return(rev(base3))
+  }
+  
+  # Converts base-3 numbers to signed edge values (0, -1, 1)
+  base3_to_signed <- function(vec) {
+    sapply(vec, function(x) if (x == 0) 0 else if (x == 1) -1 else 1)
+  }
+  
+  
+  canonical_hashes <- new.env(hash = TRUE, parent = emptyenv())
   unique_matrices <- list()
   
-  for (i in seq_len(nrow(all_combinations))) {
-    matrix_data <- matrix(as.numeric(all_combinations[i, ]), nrow = n, ncol = n)
-    canonical_hash <- get_canonical_matrix_hash(matrix_data)
+  for (i in 0:(total_graphs - 1)) {
+    vec <- int_to_base3(i, total_edges)
+    adj_vals <- base3_to_signed(vec)
+    mat <- matrix(adj_vals, nrow = n, byrow = TRUE)
     
-    if (!exists(canonical_hash, envir = canonical_hashes)) {
-      assign(canonical_hash, TRUE, envir = canonical_hashes)
-      unique_matrices <- append(unique_matrices, list(matrix_data))
+    
+    sig <- get_canonical_matrix_hash(mat)
+    h <- digest(sig)
+    
+    if (!(h %in% ls(envir = canonical_hashes))) {
+      assign(h, TRUE, envir = canonical_hashes)
+      unique_matrices[[length(unique_matrices) + 1]] <- mat
     }
   }
   
@@ -50,8 +75,9 @@ generate_adjacency_matrices_efficient <- function(n) {
 }
 
 #########################
-# 3. Boolean Expression
+# 3. Boolean Expression Generation
 #########################
+
 generate_boolean_expressions <- function(adj_matrix) {
   nodes <- colnames(adj_matrix)
   if (is.null(nodes)) {
@@ -92,8 +118,9 @@ generate_boolean_expressions <- function(adj_matrix) {
 }
 
 #########################
-# 4. Save to File (Modified)
+# 4. Save Boolean Expressions to a single text file
 #########################
+
 save_boolean_expressions_to_file <- function(results, file_name) {
   file_conn <- file(file_name, open = "w")
   for (result in results) {
@@ -107,17 +134,23 @@ save_boolean_expressions_to_file <- function(results, file_name) {
       line <- paste0(node, ", ", current_expr)
       writeLines(line, file_conn)
     }
-    writeLines("", file_conn) 
+    
+    writeLines("", file_conn)
   }
   close(file_conn)
   cat("Finished writing to file:", file_name, "\n")
 }
 
 #########################
-# 5. Main
+# 5. Main Function: Generate and Save Expressions
 #########################
+# This function ties everything together:
+#   - It generates unique adjacency matrices (using the hashed method)
+#   - It assigns node names
+#   - It creates Boolean expressions for each matrix
+#   - It saves the results to a text file.
 generate_and_save_expressions <- function(num_nodes, file_name) {
-  adj_matrices <- generate_adjacency_matrices_efficient(num_nodes)
+  adj_matrices <- generate_adjacency_matrices_hashed(num_nodes)
   
   results <- list()
   for (matrix in adj_matrices) {
@@ -133,51 +166,16 @@ generate_and_save_expressions <- function(num_nodes, file_name) {
   return(results)
 }
 
-#########################
-# 6. Boolean Expression Verifier
-#########################
-verify_boolean_expressions <- function(results) {
-  expression_set <- new.env(hash = TRUE)
-  syntax_errors <- 0
-  duplicates <- 0
-  
-  has_syntax_error <- function(expr) {
-    tryCatch({
-      parse(text = expr)
-      FALSE
-    }, error = function(e) TRUE)
-  }
-  
-  for (result in results) {
-    exprs <- unlist(result$expressions)
-    expr_string <- paste(exprs, collapse = ";")
-    
-    # Check for duplicates
-    if (exists(expr_string, envir = expression_set)) {
-      duplicates <- duplicates + 1
-    } else {
-      assign(expr_string, TRUE, envir = expression_set)
-    }
-    
-    # Check syntax
-    if (any(sapply(exprs, has_syntax_error))) {
-      cat("Invalid R parse in expression:", paste(exprs, collapse = ", "), "\n")
-      syntax_errors <- syntax_errors + 1
-    }
-  }
-  
-  cat("=== Verification Summary ===\n")
-  cat("Total networks checked:", length(results), "\n")
-  cat("Duplicates found:", duplicates, "\n")
-  cat("Syntax errors found:", syntax_errors, "\n")
-  cat("============================\n")
-}
+
 
 #########################
-# 7. Usage
+# 7. Usage Example
 #########################
-# Example: For a network with two nodes, if there's an edge A -> B then the expected output is:
+# For a network with two nodes, for example if there's an edge A -> B, the expected output is:
 # B, A
 # A, 0
+# Provide number of nodes in num_nodes
+           
 results <- generate_and_save_expressions(num_nodes = 2, file_name = "boolean_expressions.txt")
 verify_boolean_expressions(results)
+
