@@ -1,135 +1,368 @@
+Network 1 :
+A, 0
+B, 0
+
+Network 2 :
+A, 0
+B, B
+
+Network 3 :
+A, 0
+B, !B
+
+Network 4 :
+A, B
+B, 0
+
+Network 5 :
+A, B
+B, B
+
+Network 6 :
+A, B
+B, !B
+
+Network 7 :
+A, !B
+B, 0
+
+Network 8 :
+A, !B
+B, B
+
+Network 9 :
+A, !B
+B, !B
+
+Network 10 :
+A, 0
+B, A & B
+
+Network 11 :
+A, 0
+B, A | B
+
+Network 12 :
+A, 0
+B, A & !B
+
+Network 13 :
+A, 0
+B, A | !B
+
+Network 14 :
+A, B
+B, A
+
+Network 15 :
+A, B
+B, A & B
+
+Network 16 :
+A, B
+B, A | B
+
+Network 17 :
+A, B
+B, A & !B
+
+Network 18 :
+A, B
+B, A | !B
+
+Network 19 :
+A, !B
+B, A
+
+Network 20 :
+A, !B
+B, A & B
+
+Network 21 :
+A, !B
+B, A | B
+
+Network 22 :
+A, !B
+B, A & !B
+
+Network 23 :
+A, !B
+B, A | !B
+
+Network 24 :
+A, 0
+B, B & !A
+
+Network 25 :
+A, 0
+B, B | !A
+
+Network 26 :
+A, 0
+B, !A & !B
+
+Network 27 :
+A, 0
+B, !A | !B
+
+Network 28 :
+A, B
+B, B & !A
+
+Network 29 :
+A, B
+B, B | !A
+
+Network 30 :
+A, B
+B, !A & !B
+
+Network 31 :
+A, B
+B, !A | !B
+
+Network 32 :
+A, !B
+B, !A
+
+Network 33 :
+A, !B
+B, B & !A
+
+Network 34 :
+A, !B
+B, B | !A
+
+Network 35 :
+A, !B
+B, !A & !B
+
+Network 36 :
+A, !B
+B, !A | !B
+
+Network 37 :
+A, A
+B, B
+
+Network 38 :
+A, A
+B, !B
+
+Network 39 :
+A, A & B
+B, B
+
+Network 40 :
+A, A | B
+B, B
+
+Network 41 :
+A, A & B
+B, !B
+
+Network 42 :
+A, A | B
+B, !B
+
+Network 43 :
+A, A & !B
+B, B
+
+Network 44 :
+A, A | !B
+B, B
+
+Network 45 :
+A, A & !B
+B, !B
+
+Network 46 :
+A, A | !B
+B, !B
+
+Network 47 :
+A, A
+B, A & !B
+
+Network 48 :
+A, A
+B, A | !B
+
+Network 49 :
+A, A | B
+B, A | B
+
+Network 50 :
+A, A & B
+B, A & !B
+
+Network 51 :
+A, A | B
+B, A & !B
+
+Network 52 :
+A, A & B
+B, A | !B
+
+Network 53 :
+A, A | B
+B, A | !B
+
+Network 54 :
+A, A & !B
+B, A & B
+
+Network 55 :
+A, A | !B
+B, A & B
+
+Network 56 :
+A, A & !B
+B, A | B
+
+Network 57 :
+A, A | !B
+B, A | B
+
+Network 58 :
+A, A & !B
+B, A & !B
+
+Network 59 :
+A, A | !B
+B, A & !B
+
+Network 60 :
+A, A & !B
+B, A | !B
+
+Network 61 :
+A, A | !B
+B, A | !B
+
+Network 62 :
+A, A
+B, !A & !B
+
+Network 63 :
+A, A
+B, !A | !B
+
+Network 64 :
+A, A & B
+B, !A & !B
+
+Network 65 :
+A, A | B
+B, !A & !B
+
+Network 66 :
+A, A & B
+B, !A | !B
+
+Network 67 :
+A, A | B
+B, !A | !B
+
+Network 68 :
+A, A & !B
+B, B & !A
+
+Network 69 :
+A, A | !B
+B, B & !A
+
+Network 70 :
+A, A & !B
+B, B | !A
+
+Network 71 :
+A, A | !B
+B, B | !A
+
+Network 72 :
+A, A & !B
+B, !A & !B
+
+Network 73 :
+A, A | !B
+B, !A & !B
+
+Network 74 :
+A, A & !B
+B, !A | !B
+
+Network 75 :
+A, A | !B
+B, !A | !B
+
+Network 76 :
+A, !A
+B, !B
+
+Network 77 :
+A, B & !A
+B, !B
+
+Network 78 :
+A, B | !A
+B, !B
+
+Network 79 :
+A, !A & !B
+B, !B
+
+Network 80 :
+A, !A | !B
+B, !B
+
+Network 81 :
+A, B & !A
+B, A & !B
+
+Network 82 :
+A, B | !A
+B, A & !B
+
+Network 83 :
+A, B & !A
+B, A | !B
+
+Network 84 :
+A, B | !A
+B, A | !B
+
+Network 85 :
+A, !A & !B
+B, A & !B
+
+Network 86 :
+A, !A | !B
+B, A & !B
+
+Network 87 :
+A, !A & !B
+B, A | !B
+
+Network 88 :
+A, !A | !B
+B, A | !B
+
+Network 89 :
 A, !A & !B
 B, !A & !B
 
-A, !B
+Network 90 :
+A, !A | !B
 B, !A & !B
 
-A, A & !B
-B, !A & !B
+Network 91 :
+A, !A & !B
+B, !A | !B
 
-A, !A
-B, !A & !B
-
-A, 0
-B, !A & !B
-
-A, A
-B, !A & !B
-
-A, B & !A
-B, !A & !B
-
-A, B
-B, !A & !B
-
-A, A | B
-B, !A & !B
-
-A, !B
-B, !B
-
-A, A & !B
-B, !B
-
-A, !A
-B, !B
-
-A, 0
-B, !B
-
-A, A
-B, !B
-
-A, B & !A
-B, !B
-
-A, B
-B, !B
-
-A, A | B
-B, !B
-
-A, !B
-B, A & !B
-
-A, A & !B
-B, A & !B
-
-A, 0
-B, A & !B
-
-A, A
-B, A & !B
-
-A, B & !A
-B, A & !B
-
-A, B
-B, A & !B
-
-A, A | B
-B, A & !B
-
-A, !B
-B, !A
-
-A, A & !B
-B, !A
-
-A, 0
-B, !A
-
-A, A
-B, !A
-
-A, B
-B, !A
-
-A, A | B
-B, !A
-
-A, A & !B
-B, 0
-
-A, 0
-B, 0
-
-A, A
-B, 0
-
-A, B
-B, 0
-
-A, A | B
-B, 0
-
-A, A & !B
-B, A
-
-A, A
-B, A
-
-A, B
-B, A
-
-A, A | B
-B, A
-
-A, A & !B
-B, B & !A
-
-A, A
-B, B & !A
-
-A, A | B
-B, B & !A
-
-A, A
-B, B
-
-A, A | B
-B, B
-
-A, A | B
-B, A | B
+Network 92 :
+A, !A | !B
+B, !A | !B
 
