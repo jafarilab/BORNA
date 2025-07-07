@@ -1,0 +1,1541 @@
+Total networks present: 110
+
+
+Network 107 (GATES: NOR)
+Adjacency Matrix:
+   -1	-1
+   -1	-1
+Boolean Update Rules:
+  A: !A & !B
+  B: !A & !B
+Truth Table:
+   00 => 11
+   10 => 00
+   01 => 00
+   11 => 00
+
+
+Network 108 (GATES: NAND, NOR)
+Adjacency Matrix:
+   -1	-1
+   -1	-1
+Boolean Update Rules:
+  A: !A | !B
+  B: !A & !B
+Truth Table:
+   00 => 11
+   10 => 10
+   01 => 10
+   11 => 00
+
+
+Network 109 (GATES: NOR, NAND)
+Adjacency Matrix:
+   -1	-1
+   -1	-1
+Boolean Update Rules:
+  A: !A & !B
+  B: !A | !B
+Truth Table:
+   00 => 11
+   10 => 01
+   01 => 01
+   11 => 00
+
+
+Network 110 (GATES: NAND)
+Adjacency Matrix:
+   -1	-1
+   -1	-1
+Boolean Update Rules:
+  A: !A | !B
+  B: !A | !B
+Truth Table:
+   00 => 11
+   10 => 11
+   01 => 11
+   11 => 00
+
+
+Network 97 (GATES: NOR)
+Adjacency Matrix:
+   -1	0
+   -1	-1
+Boolean Update Rules:
+  A: !A
+  B: !A & !B
+Truth Table:
+   00 => 11
+   10 => 00
+   01 => 10
+   11 => 00
+
+
+Network 98 (GATES: NAND)
+Adjacency Matrix:
+   -1	0
+   -1	-1
+Boolean Update Rules:
+  A: !A
+  B: !A | !B
+Truth Table:
+   00 => 11
+   10 => 01
+   01 => 11
+   11 => 00
+
+
+Network 103 (GATES: NOR)
+Adjacency Matrix:
+   -1	1
+   -1	-1
+Boolean Update Rules:
+  A: B & !A
+  B: !A & !B
+Truth Table:
+   00 => 01
+   10 => 00
+   01 => 10
+   11 => 00
+
+
+Network 104 (GATES: NOR)
+Adjacency Matrix:
+   -1	1
+   -1	-1
+Boolean Update Rules:
+  A: !A | B
+  B: !A & !B
+Truth Table:
+   00 => 11
+   10 => 00
+   01 => 10
+   11 => 10
+
+
+Network 105 (GATES: NAND)
+Adjacency Matrix:
+   -1	1
+   -1	-1
+Boolean Update Rules:
+  A: B & !A
+  B: !A | !B
+Truth Table:
+   00 => 01
+   10 => 01
+   01 => 11
+   11 => 00
+
+
+Network 106 (GATES: NAND)
+Adjacency Matrix:
+   -1	1
+   -1	-1
+Boolean Update Rules:
+  A: !A | B
+  B: !A | !B
+Truth Table:
+   00 => 11
+   10 => 01
+   01 => 11
+   11 => 10
+
+
+Network 94 (GATES: NONE)
+Adjacency Matrix:
+   -1	0
+   0	-1
+Boolean Update Rules:
+  A: !A
+  B: !B
+Truth Table:
+   00 => 11
+   10 => 01
+   01 => 10
+   11 => 00
+
+
+Network 95 (GATES: NONE)
+Adjacency Matrix:
+   -1	0
+   1	-1
+Boolean Update Rules:
+  A: !A
+  B: A & !B
+Truth Table:
+   00 => 10
+   10 => 01
+   01 => 10
+   11 => 00
+
+
+Network 96 (GATES: NONE)
+Adjacency Matrix:
+   -1	0
+   1	-1
+Boolean Update Rules:
+  A: !A
+  B: !B | A
+Truth Table:
+   00 => 11
+   10 => 01
+   01 => 10
+   11 => 01
+
+
+Network 99 (GATES: NONE)
+Adjacency Matrix:
+   -1	1
+   1	-1
+Boolean Update Rules:
+  A: B & !A
+  B: A & !B
+Truth Table:
+   00 => 00
+   10 => 01
+   01 => 10
+   11 => 00
+
+
+Network 100 (GATES: NONE)
+Adjacency Matrix:
+   -1	1
+   1	-1
+Boolean Update Rules:
+  A: !A | B
+  B: A & !B
+Truth Table:
+   00 => 10
+   10 => 01
+   01 => 10
+   11 => 10
+
+
+Network 101 (GATES: NONE)
+Adjacency Matrix:
+   -1	1
+   1	-1
+Boolean Update Rules:
+  A: B & !A
+  B: !B | A
+Truth Table:
+   00 => 01
+   10 => 01
+   01 => 10
+   11 => 01
+
+
+Network 102 (GATES: NONE)
+Adjacency Matrix:
+   -1	1
+   1	-1
+Boolean Update Rules:
+  A: !A | B
+  B: !B | A
+Truth Table:
+   00 => 11
+   10 => 01
+   01 => 10
+   11 => 11
+
+
+Network 50 (GATES: NOR)
+Adjacency Matrix:
+   0	-1
+   -1	-1
+Boolean Update Rules:
+  A: !B
+  B: !A & !B
+Truth Table:
+   00 => 11
+   10 => 10
+   01 => 00
+   11 => 00
+
+
+Network 51 (GATES: NAND)
+Adjacency Matrix:
+   0	-1
+   -1	-1
+Boolean Update Rules:
+  A: !B
+  B: !A | !B
+Truth Table:
+   00 => 11
+   10 => 11
+   01 => 01
+   11 => 00
+
+
+Network 47 (GATES: NONE)
+Adjacency Matrix:
+   0	-1
+   -1	0
+Boolean Update Rules:
+  A: !B
+  B: !A
+Truth Table:
+   00 => 11
+   10 => 10
+   01 => 01
+   11 => 00
+
+
+Network 48 (GATES: NONE)
+Adjacency Matrix:
+   0	-1
+   -1	1
+Boolean Update Rules:
+  A: !B
+  B: B & !A
+Truth Table:
+   00 => 10
+   10 => 10
+   01 => 01
+   11 => 00
+
+
+Network 49 (GATES: NONE)
+Adjacency Matrix:
+   0	-1
+   -1	1
+Boolean Update Rules:
+  A: !B
+  B: !A | B
+Truth Table:
+   00 => 11
+   10 => 10
+   01 => 01
+   11 => 01
+
+
+Network 25 (GATES: NOR)
+Adjacency Matrix:
+   0	0
+   -1	-1
+Boolean Update Rules:
+  A: 0
+  B: !A & !B
+Truth Table:
+   00 => 01
+   10 => 00
+   01 => 00
+   11 => 00
+
+
+Network 26 (GATES: NOR)
+Adjacency Matrix:
+   0	0
+   -1	-1
+Boolean Update Rules:
+  A: 1
+  B: !A & !B
+Truth Table:
+   00 => 11
+   10 => 10
+   01 => 10
+   11 => 10
+
+
+Network 27 (GATES: NAND)
+Adjacency Matrix:
+   0	0
+   -1	-1
+Boolean Update Rules:
+  A: 0
+  B: !A | !B
+Truth Table:
+   00 => 01
+   10 => 01
+   01 => 01
+   11 => 00
+
+
+Network 28 (GATES: NAND)
+Adjacency Matrix:
+   0	0
+   -1	-1
+Boolean Update Rules:
+  A: 1
+  B: !A | !B
+Truth Table:
+   00 => 11
+   10 => 11
+   01 => 11
+   11 => 10
+
+
+Network 19 (GATES: NONE)
+Adjacency Matrix:
+   0	0
+   -1	0
+Boolean Update Rules:
+  A: 0
+  B: !A
+Truth Table:
+   00 => 01
+   10 => 00
+   01 => 01
+   11 => 00
+
+
+Network 20 (GATES: NONE)
+Adjacency Matrix:
+   0	0
+   -1	0
+Boolean Update Rules:
+  A: 1
+  B: !A
+Truth Table:
+   00 => 11
+   10 => 10
+   01 => 11
+   11 => 10
+
+
+Network 21 (GATES: NONE)
+Adjacency Matrix:
+   0	0
+   -1	1
+Boolean Update Rules:
+  A: 0
+  B: B & !A
+Truth Table:
+   00 => 00
+   10 => 00
+   01 => 01
+   11 => 00
+
+
+Network 22 (GATES: NONE)
+Adjacency Matrix:
+   0	0
+   -1	1
+Boolean Update Rules:
+  A: 1
+  B: B & !A
+Truth Table:
+   00 => 10
+   10 => 10
+   01 => 11
+   11 => 10
+
+
+Network 23 (GATES: NONE)
+Adjacency Matrix:
+   0	0
+   -1	1
+Boolean Update Rules:
+  A: 0
+  B: !A | B
+Truth Table:
+   00 => 01
+   10 => 00
+   01 => 01
+   11 => 01
+
+
+Network 24 (GATES: NONE)
+Adjacency Matrix:
+   0	0
+   -1	1
+Boolean Update Rules:
+  A: 1
+  B: !A | B
+Truth Table:
+   00 => 11
+   10 => 10
+   01 => 11
+   11 => 11
+
+
+Network 39 (GATES: NOR)
+Adjacency Matrix:
+   0	1
+   -1	-1
+Boolean Update Rules:
+  A: B
+  B: !A & !B
+Truth Table:
+   00 => 01
+   10 => 00
+   01 => 10
+   11 => 10
+
+
+Network 40 (GATES: NAND)
+Adjacency Matrix:
+   0	1
+   -1	-1
+Boolean Update Rules:
+  A: B
+  B: !A | !B
+Truth Table:
+   00 => 01
+   10 => 01
+   01 => 11
+   11 => 10
+
+
+Network 36 (GATES: NONE)
+Adjacency Matrix:
+   0	1
+   -1	0
+Boolean Update Rules:
+  A: B
+  B: !A
+Truth Table:
+   00 => 01
+   10 => 00
+   01 => 11
+   11 => 10
+
+
+Network 37 (GATES: NONE)
+Adjacency Matrix:
+   0	1
+   -1	1
+Boolean Update Rules:
+  A: B
+  B: B & !A
+Truth Table:
+   00 => 00
+   10 => 00
+   01 => 11
+   11 => 10
+
+
+Network 38 (GATES: NONE)
+Adjacency Matrix:
+   0	1
+   -1	1
+Boolean Update Rules:
+  A: B
+  B: !A | B
+Truth Table:
+   00 => 01
+   10 => 00
+   01 => 11
+   11 => 11
+
+
+Network 42 (GATES: NONE)
+Adjacency Matrix:
+   0	-1
+   0	-1
+Boolean Update Rules:
+  A: !B
+  B: !B
+Truth Table:
+   00 => 11
+   10 => 11
+   01 => 00
+   11 => 00
+
+
+Network 41 (GATES: NONE)
+Adjacency Matrix:
+   0	-1
+   0	1
+Boolean Update Rules:
+  A: !B
+  B: B
+Truth Table:
+   00 => 10
+   10 => 10
+   01 => 01
+   11 => 01
+
+
+Network 7 (GATES: NONE)
+Adjacency Matrix:
+   0	0
+   0	-1
+Boolean Update Rules:
+  A: 0
+  B: !B
+Truth Table:
+   00 => 01
+   10 => 01
+   01 => 00
+   11 => 00
+
+
+Network 8 (GATES: NONE)
+Adjacency Matrix:
+   0	0
+   0	-1
+Boolean Update Rules:
+  A: 1
+  B: !B
+Truth Table:
+   00 => 11
+   10 => 11
+   01 => 10
+   11 => 10
+
+
+Network 1 (GATES: NONE)
+Adjacency Matrix:
+   0	0
+   0	0
+Boolean Update Rules:
+  A: 0
+  B: 0
+Truth Table:
+   00 => 00
+   10 => 00
+   01 => 00
+   11 => 00
+
+
+Network 2 (GATES: NONE)
+Adjacency Matrix:
+   0	0
+   0	0
+Boolean Update Rules:
+  A: 1
+  B: 0
+Truth Table:
+   00 => 10
+   10 => 10
+   01 => 10
+   11 => 10
+
+
+Network 3 (GATES: NONE)
+Adjacency Matrix:
+   0	0
+   0	0
+Boolean Update Rules:
+  A: 0
+  B: 1
+Truth Table:
+   00 => 01
+   10 => 01
+   01 => 01
+   11 => 01
+
+
+Network 4 (GATES: NONE)
+Adjacency Matrix:
+   0	0
+   0	0
+Boolean Update Rules:
+  A: 1
+  B: 1
+Truth Table:
+   00 => 11
+   10 => 11
+   01 => 11
+   11 => 11
+
+
+Network 5 (GATES: NONE)
+Adjacency Matrix:
+   0	0
+   0	1
+Boolean Update Rules:
+  A: 0
+  B: B
+Truth Table:
+   00 => 00
+   10 => 00
+   01 => 01
+   11 => 01
+
+
+Network 6 (GATES: NONE)
+Adjacency Matrix:
+   0	0
+   0	1
+Boolean Update Rules:
+  A: 1
+  B: B
+Truth Table:
+   00 => 10
+   10 => 10
+   01 => 11
+   11 => 11
+
+
+Network 30 (GATES: NONE)
+Adjacency Matrix:
+   0	1
+   0	-1
+Boolean Update Rules:
+  A: B
+  B: !B
+Truth Table:
+   00 => 01
+   10 => 01
+   01 => 10
+   11 => 10
+
+
+Network 29 (GATES: NONE)
+Adjacency Matrix:
+   0	1
+   0	1
+Boolean Update Rules:
+  A: B
+  B: B
+Truth Table:
+   00 => 00
+   10 => 00
+   01 => 11
+   11 => 11
+
+
+Network 45 (GATES: NONE)
+Adjacency Matrix:
+   0	-1
+   1	-1
+Boolean Update Rules:
+  A: !B
+  B: A & !B
+Truth Table:
+   00 => 10
+   10 => 11
+   01 => 00
+   11 => 00
+
+
+Network 46 (GATES: NONE)
+Adjacency Matrix:
+   0	-1
+   1	-1
+Boolean Update Rules:
+  A: !B
+  B: !B | A
+Truth Table:
+   00 => 11
+   10 => 11
+   01 => 00
+   11 => 01
+
+
+Network 43 (GATES: AND)
+Adjacency Matrix:
+   0	-1
+   1	1
+Boolean Update Rules:
+  A: !B
+  B: A & B
+Truth Table:
+   00 => 10
+   10 => 10
+   01 => 00
+   11 => 01
+
+
+Network 44 (GATES: OR)
+Adjacency Matrix:
+   0	-1
+   1	1
+Boolean Update Rules:
+  A: !B
+  B: A | B
+Truth Table:
+   00 => 10
+   10 => 11
+   01 => 01
+   11 => 01
+
+
+Network 15 (GATES: NONE)
+Adjacency Matrix:
+   0	0
+   1	-1
+Boolean Update Rules:
+  A: 0
+  B: A & !B
+Truth Table:
+   00 => 00
+   10 => 01
+   01 => 00
+   11 => 00
+
+
+Network 16 (GATES: NONE)
+Adjacency Matrix:
+   0	0
+   1	-1
+Boolean Update Rules:
+  A: 1
+  B: A & !B
+Truth Table:
+   00 => 10
+   10 => 11
+   01 => 10
+   11 => 10
+
+
+Network 17 (GATES: NONE)
+Adjacency Matrix:
+   0	0
+   1	-1
+Boolean Update Rules:
+  A: 0
+  B: !B | A
+Truth Table:
+   00 => 01
+   10 => 01
+   01 => 00
+   11 => 01
+
+
+Network 18 (GATES: NONE)
+Adjacency Matrix:
+   0	0
+   1	-1
+Boolean Update Rules:
+  A: 1
+  B: !B | A
+Truth Table:
+   00 => 11
+   10 => 11
+   01 => 10
+   11 => 11
+
+
+Network 9 (GATES: NONE)
+Adjacency Matrix:
+   0	0
+   1	0
+Boolean Update Rules:
+  A: 0
+  B: A
+Truth Table:
+   00 => 00
+   10 => 01
+   01 => 00
+   11 => 01
+
+
+Network 10 (GATES: NONE)
+Adjacency Matrix:
+   0	0
+   1	0
+Boolean Update Rules:
+  A: 1
+  B: A
+Truth Table:
+   00 => 10
+   10 => 11
+   01 => 10
+   11 => 11
+
+
+Network 11 (GATES: AND)
+Adjacency Matrix:
+   0	0
+   1	1
+Boolean Update Rules:
+  A: 0
+  B: A & B
+Truth Table:
+   00 => 00
+   10 => 00
+   01 => 00
+   11 => 01
+
+
+Network 12 (GATES: AND)
+Adjacency Matrix:
+   0	0
+   1	1
+Boolean Update Rules:
+  A: 1
+  B: A & B
+Truth Table:
+   00 => 10
+   10 => 10
+   01 => 10
+   11 => 11
+
+
+Network 13 (GATES: OR)
+Adjacency Matrix:
+   0	0
+   1	1
+Boolean Update Rules:
+  A: 0
+  B: A | B
+Truth Table:
+   00 => 00
+   10 => 01
+   01 => 01
+   11 => 01
+
+
+Network 14 (GATES: OR)
+Adjacency Matrix:
+   0	0
+   1	1
+Boolean Update Rules:
+  A: 1
+  B: A | B
+Truth Table:
+   00 => 10
+   10 => 11
+   01 => 11
+   11 => 11
+
+
+Network 34 (GATES: NONE)
+Adjacency Matrix:
+   0	1
+   1	-1
+Boolean Update Rules:
+  A: B
+  B: A & !B
+Truth Table:
+   00 => 00
+   10 => 01
+   01 => 10
+   11 => 10
+
+
+Network 35 (GATES: NONE)
+Adjacency Matrix:
+   0	1
+   1	-1
+Boolean Update Rules:
+  A: B
+  B: !B | A
+Truth Table:
+   00 => 01
+   10 => 01
+   01 => 10
+   11 => 11
+
+
+Network 31 (GATES: NONE)
+Adjacency Matrix:
+   0	1
+   1	0
+Boolean Update Rules:
+  A: B
+  B: A
+Truth Table:
+   00 => 00
+   10 => 01
+   01 => 10
+   11 => 11
+
+
+Network 32 (GATES: AND)
+Adjacency Matrix:
+   0	1
+   1	1
+Boolean Update Rules:
+  A: B
+  B: A & B
+Truth Table:
+   00 => 00
+   10 => 00
+   01 => 10
+   11 => 11
+
+
+Network 33 (GATES: OR)
+Adjacency Matrix:
+   0	1
+   1	1
+Boolean Update Rules:
+  A: B
+  B: A | B
+Truth Table:
+   00 => 00
+   10 => 01
+   01 => 11
+   11 => 11
+
+
+Network 90 (GATES: NOR)
+Adjacency Matrix:
+   1	-1
+   -1	-1
+Boolean Update Rules:
+  A: A & !B
+  B: !A & !B
+Truth Table:
+   00 => 01
+   10 => 10
+   01 => 00
+   11 => 00
+
+
+Network 91 (GATES: NOR)
+Adjacency Matrix:
+   1	-1
+   -1	-1
+Boolean Update Rules:
+  A: !B | A
+  B: !A & !B
+Truth Table:
+   00 => 11
+   10 => 10
+   01 => 00
+   11 => 10
+
+
+Network 92 (GATES: NAND)
+Adjacency Matrix:
+   1	-1
+   -1	-1
+Boolean Update Rules:
+  A: A & !B
+  B: !A | !B
+Truth Table:
+   00 => 01
+   10 => 11
+   01 => 01
+   11 => 00
+
+
+Network 93 (GATES: NAND)
+Adjacency Matrix:
+   1	-1
+   -1	-1
+Boolean Update Rules:
+  A: !B | A
+  B: !A | !B
+Truth Table:
+   00 => 11
+   10 => 11
+   01 => 01
+   11 => 10
+
+
+Network 86 (GATES: NONE)
+Adjacency Matrix:
+   1	-1
+   -1	1
+Boolean Update Rules:
+  A: A & !B
+  B: B & !A
+Truth Table:
+   00 => 00
+   10 => 10
+   01 => 01
+   11 => 00
+
+
+Network 87 (GATES: NONE)
+Adjacency Matrix:
+   1	-1
+   -1	1
+Boolean Update Rules:
+  A: !B | A
+  B: B & !A
+Truth Table:
+   00 => 10
+   10 => 10
+   01 => 01
+   11 => 10
+
+
+Network 88 (GATES: NONE)
+Adjacency Matrix:
+   1	-1
+   -1	1
+Boolean Update Rules:
+  A: A & !B
+  B: !A | B
+Truth Table:
+   00 => 01
+   10 => 10
+   01 => 01
+   11 => 01
+
+
+Network 89 (GATES: NONE)
+Adjacency Matrix:
+   1	-1
+   -1	1
+Boolean Update Rules:
+  A: !B | A
+  B: !A | B
+Truth Table:
+   00 => 11
+   10 => 10
+   01 => 01
+   11 => 11
+
+
+Network 60 (GATES: NOR)
+Adjacency Matrix:
+   1	0
+   -1	-1
+Boolean Update Rules:
+  A: A
+  B: !A & !B
+Truth Table:
+   00 => 01
+   10 => 10
+   01 => 00
+   11 => 10
+
+
+Network 61 (GATES: NAND)
+Adjacency Matrix:
+   1	0
+   -1	-1
+Boolean Update Rules:
+  A: A
+  B: !A | !B
+Truth Table:
+   00 => 01
+   10 => 11
+   01 => 01
+   11 => 10
+
+
+Network 58 (GATES: NONE)
+Adjacency Matrix:
+   1	0
+   -1	1
+Boolean Update Rules:
+  A: A
+  B: B & !A
+Truth Table:
+   00 => 00
+   10 => 10
+   01 => 01
+   11 => 10
+
+
+Network 59 (GATES: NONE)
+Adjacency Matrix:
+   1	0
+   -1	1
+Boolean Update Rules:
+  A: A
+  B: !A | B
+Truth Table:
+   00 => 01
+   10 => 10
+   01 => 01
+   11 => 11
+
+
+Network 76 (GATES: AND, NOR)
+Adjacency Matrix:
+   1	1
+   -1	-1
+Boolean Update Rules:
+  A: A & B
+  B: !A & !B
+Truth Table:
+   00 => 01
+   10 => 00
+   01 => 00
+   11 => 10
+
+
+Network 77 (GATES: OR, NOR)
+Adjacency Matrix:
+   1	1
+   -1	-1
+Boolean Update Rules:
+  A: A | B
+  B: !A & !B
+Truth Table:
+   00 => 01
+   10 => 10
+   01 => 10
+   11 => 10
+
+
+Network 78 (GATES: AND, NAND)
+Adjacency Matrix:
+   1	1
+   -1	-1
+Boolean Update Rules:
+  A: A & B
+  B: !A | !B
+Truth Table:
+   00 => 01
+   10 => 01
+   01 => 01
+   11 => 10
+
+
+Network 79 (GATES: OR, NAND)
+Adjacency Matrix:
+   1	1
+   -1	-1
+Boolean Update Rules:
+  A: A | B
+  B: !A | !B
+Truth Table:
+   00 => 01
+   10 => 11
+   01 => 11
+   11 => 10
+
+
+Network 72 (GATES: AND)
+Adjacency Matrix:
+   1	1
+   -1	1
+Boolean Update Rules:
+  A: A & B
+  B: B & !A
+Truth Table:
+   00 => 00
+   10 => 00
+   01 => 01
+   11 => 10
+
+
+Network 73 (GATES: OR)
+Adjacency Matrix:
+   1	1
+   -1	1
+Boolean Update Rules:
+  A: A | B
+  B: B & !A
+Truth Table:
+   00 => 00
+   10 => 10
+   01 => 11
+   11 => 10
+
+
+Network 74 (GATES: AND)
+Adjacency Matrix:
+   1	1
+   -1	1
+Boolean Update Rules:
+  A: A & B
+  B: !A | B
+Truth Table:
+   00 => 01
+   10 => 00
+   01 => 01
+   11 => 11
+
+
+Network 75 (GATES: OR)
+Adjacency Matrix:
+   1	1
+   -1	1
+Boolean Update Rules:
+  A: A | B
+  B: !A | B
+Truth Table:
+   00 => 01
+   10 => 10
+   01 => 11
+   11 => 11
+
+
+Network 80 (GATES: NONE)
+Adjacency Matrix:
+   1	-1
+   0	-1
+Boolean Update Rules:
+  A: A & !B
+  B: !B
+Truth Table:
+   00 => 01
+   10 => 11
+   01 => 00
+   11 => 00
+
+
+Network 81 (GATES: NONE)
+Adjacency Matrix:
+   1	-1
+   0	-1
+Boolean Update Rules:
+  A: !B | A
+  B: !B
+Truth Table:
+   00 => 11
+   10 => 11
+   01 => 00
+   11 => 10
+
+
+Network 53 (GATES: NONE)
+Adjacency Matrix:
+   1	0
+   0	-1
+Boolean Update Rules:
+  A: A
+  B: !B
+Truth Table:
+   00 => 01
+   10 => 11
+   01 => 00
+   11 => 10
+
+
+Network 52 (GATES: NONE)
+Adjacency Matrix:
+   1	0
+   0	1
+Boolean Update Rules:
+  A: A
+  B: B
+Truth Table:
+   00 => 00
+   10 => 10
+   01 => 01
+   11 => 11
+
+
+Network 62 (GATES: AND)
+Adjacency Matrix:
+   1	1
+   0	-1
+Boolean Update Rules:
+  A: A & B
+  B: !B
+Truth Table:
+   00 => 01
+   10 => 01
+   01 => 00
+   11 => 10
+
+
+Network 63 (GATES: OR)
+Adjacency Matrix:
+   1	1
+   0	-1
+Boolean Update Rules:
+  A: A | B
+  B: !B
+Truth Table:
+   00 => 01
+   10 => 11
+   01 => 10
+   11 => 10
+
+
+Network 82 (GATES: NONE)
+Adjacency Matrix:
+   1	-1
+   1	-1
+Boolean Update Rules:
+  A: A & !B
+  B: A & !B
+Truth Table:
+   00 => 00
+   10 => 11
+   01 => 00
+   11 => 00
+
+
+Network 83 (GATES: NONE)
+Adjacency Matrix:
+   1	-1
+   1	-1
+Boolean Update Rules:
+  A: !B | A
+  B: A & !B
+Truth Table:
+   00 => 10
+   10 => 11
+   01 => 00
+   11 => 10
+
+
+Network 84 (GATES: NONE)
+Adjacency Matrix:
+   1	-1
+   1	-1
+Boolean Update Rules:
+  A: A & !B
+  B: !B | A
+Truth Table:
+   00 => 01
+   10 => 11
+   01 => 00
+   11 => 01
+
+
+Network 85 (GATES: NONE)
+Adjacency Matrix:
+   1	-1
+   1	-1
+Boolean Update Rules:
+  A: !B | A
+  B: !B | A
+Truth Table:
+   00 => 11
+   10 => 11
+   01 => 00
+   11 => 11
+
+
+Network 56 (GATES: NONE)
+Adjacency Matrix:
+   1	0
+   1	-1
+Boolean Update Rules:
+  A: A
+  B: A & !B
+Truth Table:
+   00 => 00
+   10 => 11
+   01 => 00
+   11 => 10
+
+
+Network 57 (GATES: NONE)
+Adjacency Matrix:
+   1	0
+   1	-1
+Boolean Update Rules:
+  A: A
+  B: !B | A
+Truth Table:
+   00 => 01
+   10 => 11
+   01 => 00
+   11 => 11
+
+
+Network 54 (GATES: AND)
+Adjacency Matrix:
+   1	0
+   1	1
+Boolean Update Rules:
+  A: A
+  B: A & B
+Truth Table:
+   00 => 00
+   10 => 10
+   01 => 00
+   11 => 11
+
+
+Network 55 (GATES: OR)
+Adjacency Matrix:
+   1	0
+   1	1
+Boolean Update Rules:
+  A: A
+  B: A | B
+Truth Table:
+   00 => 00
+   10 => 11
+   01 => 01
+   11 => 11
+
+
+Network 68 (GATES: AND)
+Adjacency Matrix:
+   1	1
+   1	-1
+Boolean Update Rules:
+  A: A & B
+  B: A & !B
+Truth Table:
+   00 => 00
+   10 => 01
+   01 => 00
+   11 => 10
+
+
+Network 69 (GATES: OR)
+Adjacency Matrix:
+   1	1
+   1	-1
+Boolean Update Rules:
+  A: A | B
+  B: A & !B
+Truth Table:
+   00 => 00
+   10 => 11
+   01 => 10
+   11 => 10
+
+
+Network 70 (GATES: AND)
+Adjacency Matrix:
+   1	1
+   1	-1
+Boolean Update Rules:
+  A: A & B
+  B: !B | A
+Truth Table:
+   00 => 01
+   10 => 01
+   01 => 00
+   11 => 11
+
+
+Network 71 (GATES: OR)
+Adjacency Matrix:
+   1	1
+   1	-1
+Boolean Update Rules:
+  A: A | B
+  B: !B | A
+Truth Table:
+   00 => 01
+   10 => 11
+   01 => 10
+   11 => 11
+
+
+Network 64 (GATES: AND)
+Adjacency Matrix:
+   1	1
+   1	1
+Boolean Update Rules:
+  A: A & B
+  B: A & B
+Truth Table:
+   00 => 00
+   10 => 00
+   01 => 00
+   11 => 11
+
+
+Network 65 (GATES: OR, AND)
+Adjacency Matrix:
+   1	1
+   1	1
+Boolean Update Rules:
+  A: A | B
+  B: A & B
+Truth Table:
+   00 => 00
+   10 => 10
+   01 => 10
+   11 => 11
+
+
+Network 66 (GATES: AND, OR)
+Adjacency Matrix:
+   1	1
+   1	1
+Boolean Update Rules:
+  A: A & B
+  B: A | B
+Truth Table:
+   00 => 00
+   10 => 01
+   01 => 01
+   11 => 11
+
+
+Network 67 (GATES: OR)
+Adjacency Matrix:
+   1	1
+   1	1
+Boolean Update Rules:
+  A: A | B
+  B: A | B
+Truth Table:
+   00 => 00
+   10 => 11
+   01 => 11
+   11 => 11
