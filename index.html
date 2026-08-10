@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Two-Node Boolean STG Explorer</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app-shell">
+    <header class="topbar">
+      <div>
+        <h1>Two-Node Boolean STG Explorer</h1>
+        <p>Boolean rules, signed network, truth table, and state-transition graph</p>
+      </div>
+      <div class="mode-switch" role="group" aria-label="Mode">
+        <button id="presetMode" class="seg active" type="button">89 presets</button>
+        <button id="customMode" class="seg" type="button">Custom rules</button>
+      </div>
+    </header>
+
+    <section class="control-band">
+      <label class="field preset-only">
+        <span>Network</span>
+        <select id="networkSelect"></select>
+      </label>
+
+      <label class="field custom-only hidden">
+        <span>A' rule</span>
+        <select id="ruleASelect"></select>
+      </label>
+
+      <label class="field custom-only hidden">
+        <span>B' rule</span>
+        <select id="ruleBSelect"></select>
+      </label>
+
+      <label class="field">
+        <span>Update scheme</span>
+        <select id="schemeSelect">
+          <option value="async">Asynchronous</option>
+          <option value="sync">Synchronous</option>
+        </select>
+      </label>
+
+      <label class="check-field">
+        <input id="selfLoopToggle" type="checkbox" checked>
+        <span>Show self-loops</span>
+      </label>
+    </section>
+
+    <section class="meta-strip">
+      <div>
+        <span class="eyebrow">Topology</span>
+        <strong id="topologyText">-</strong>
+      </div>
+      <div>
+        <span class="eyebrow">Rule A</span>
+        <strong id="ruleAText">-</strong>
+      </div>
+      <div>
+        <span class="eyebrow">Rule B</span>
+        <strong id="ruleBText">-</strong>
+      </div>
+      <div>
+        <span class="eyebrow">Attractors</span>
+        <strong id="attractorText">-</strong>
+      </div>
+    </section>
+
+    <section class="workspace">
+      <section class="panel network-panel">
+        <div class="panel-head">
+          <h2>Signed Network</h2>
+          <span id="signLegend">+ activation, - inhibition</span>
+        </div>
+        <svg id="networkSvg" viewBox="0 0 520 320" aria-label="Signed network diagram"></svg>
+      </section>
+
+      <section class="panel stg-panel">
+        <div class="panel-head">
+          <h2>STG</h2>
+          <span id="edgeCountText">-</span>
+        </div>
+        <svg id="stgSvg" viewBox="0 0 720 520" aria-label="State transition graph"></svg>
+      </section>
+
+      <section class="panel table-panel">
+        <div class="panel-head">
+          <h2>Truth Table</h2>
+          <span>state order: 00, 01, 10, 11</span>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Start</th>
+                <th>Sync next</th>
+                <th>A only</th>
+                <th>B only</th>
+              </tr>
+            </thead>
+            <tbody id="truthBody"></tbody>
+          </table>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
