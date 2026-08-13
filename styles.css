@@ -47,8 +47,8 @@ body {
 }
 
 .logo {
-  width: 42px;
-  height: 42px;
+  width: 12px;
+  height: 12px;
   object-fit: contain;
   flex-shrink: 0;
 }
