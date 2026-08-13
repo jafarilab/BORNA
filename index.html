@@ -1,18 +1,28 @@
+```html
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Two-Node Boolean STG Explorer</title>
+  <meta name="description" content="Interactive explorer for two-node Boolean signed state-transition graphs.">
+  <meta name="theme-color" content="#ffffff">
+  <title>BORNA: BOolean network two-node dynamics via state-tRansition graph aNAlysis</title>
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
   <main class="app-shell">
+
     <header class="topbar">
-      <div>
-        <h1>Two-Node Boolean STG Explorer</h1>
-        <p>Boolean rules, signed network, truth table, and state-transition graph</p>
+      <div class="brand">
+        <img src="logo.png" alt="BORNA logo" class="logo">
+
+        <div class="brand-text">
+          <h1>Two-Node Boolean STG Explorer</h1>
+          <p>Boolean rules, signed network, truth table, and state-transition graph</p>
+        </div>
       </div>
+
       <div class="mode-switch" role="group" aria-label="Mode">
         <button id="presetMode" class="seg active" type="button">89 presets</button>
         <button id="customMode" class="seg" type="button">Custom rules</button>
@@ -54,14 +64,17 @@
         <span class="eyebrow">Topology</span>
         <strong id="topologyText">-</strong>
       </div>
+
       <div>
         <span class="eyebrow">Rule A</span>
         <strong id="ruleAText">-</strong>
       </div>
+
       <div>
         <span class="eyebrow">Rule B</span>
         <strong id="ruleBText">-</strong>
       </div>
+
       <div>
         <span class="eyebrow">Attractors</span>
         <strong id="attractorText">-</strong>
@@ -69,12 +82,18 @@
     </section>
 
     <section class="workspace">
+
       <section class="panel network-panel">
         <div class="panel-head">
           <h2>Signed Network</h2>
           <span id="signLegend">+ activation, - inhibition</span>
         </div>
-        <svg id="networkSvg" viewBox="0 0 520 320" aria-label="Signed network diagram"></svg>
+
+        <svg
+          id="networkSvg"
+          viewBox="0 0 520 320"
+          aria-label="Signed network diagram">
+        </svg>
       </section>
 
       <section class="panel stg-panel">
@@ -82,7 +101,12 @@
           <h2>STG</h2>
           <span id="edgeCountText">-</span>
         </div>
-        <svg id="stgSvg" viewBox="0 0 720 520" aria-label="State transition graph"></svg>
+
+        <svg
+          id="stgSvg"
+          viewBox="0 0 720 520"
+          aria-label="State transition graph">
+        </svg>
       </section>
 
       <section class="panel table-panel">
@@ -90,6 +114,7 @@
           <h2>Truth Table</h2>
           <span>state order: 00, 01, 10, 11</span>
         </div>
+
         <div class="table-wrap">
           <table>
             <thead>
@@ -100,13 +125,17 @@
                 <th>B only</th>
               </tr>
             </thead>
+
             <tbody id="truthBody"></tbody>
           </table>
         </div>
       </section>
+
     </section>
+
   </main>
 
   <script src="app.js"></script>
 </body>
 </html>
+```
