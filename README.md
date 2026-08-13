@@ -1,6 +1,6 @@
 # BORNA — BOolean network two-node dynamics via state-tRansition graph aNalysis
 
-<p align="center"> <img src="logo.jpeg" alt="BORNA logo" width="120"> </p>
+<p align="center"> <img src="logo.jpeg" alt="BORNA logo" width="240"> </p>
 
 <p align="center"> <strong>An interactive explorer for two-node Boolean networks and state-transition graph dynamics.</strong> </p>
 
