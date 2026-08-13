@@ -1,5 +1,9 @@
 # BORNA — BOolean network two-node dynamics via state-tRansition graph aNalysis
 
+<p align="center"> <img src="logo.jpeg" alt="BORNA logo" width="120"> </p>
+
+<p align="center"> <strong>An interactive explorer for two-node Boolean networks and state-transition graph dynamics.</strong> </p>
+
 **BORNA** is an interactive web application for exploring two-node signed Boolean networks and their state-transition graph (STG) dynamics. It was developed as a companion tool for the associated research study, providing interactive access to the complete catalogue of two-node Boolean-network realizations and their dynamical behaviors under both synchronous and asynchronous updating.
 
 The application runs directly in a web browser and requires no installation or external dependencies.
