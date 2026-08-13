@@ -4,32 +4,68 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Interactive explorer for two-node Boolean signed state-transition graphs.">
+
+  <meta
+    name="description"
+    content="BORNA: Boolean network two-node dynamics via state-transition graph analysis."
+  >
+
   <meta name="theme-color" content="#ffffff">
+
   <title>BORNA: BOolean network two-node dynamics via state-tRansition graph aNAlysis</title>
+
   <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
   <main class="app-shell">
 
+    <!-- Header -->
     <header class="topbar">
+
       <div class="brand">
-        <img src="logo.jpeg" alt="BORNA logo" class="logo">
+        <img
+          src="logo.jpeg"
+          alt="BORNA logo"
+          class="logo"
+        >
 
         <div class="brand-text">
           <h1>Two-Node Boolean STG Explorer</h1>
-          <p>Boolean rules, signed network, truth table, and state-transition graph</p>
+          <p>
+            Boolean rules, signed network, truth table, and state-transition graph
+          </p>
         </div>
       </div>
 
-      <div class="mode-switch" role="group" aria-label="Mode">
-        <button id="presetMode" class="seg active" type="button">89 presets</button>
-        <button id="customMode" class="seg" type="button">Custom rules</button>
+      <div
+        class="mode-switch"
+        role="group"
+        aria-label="Mode"
+      >
+        <button
+          id="presetMode"
+          class="seg active"
+          type="button"
+        >
+          89 presets
+        </button>
+
+        <button
+          id="customMode"
+          class="seg"
+          type="button"
+        >
+          Custom rules
+        </button>
       </div>
+
     </header>
 
+
+    <!-- Controls -->
     <section class="control-band">
+
       <label class="field preset-only">
         <span>Network</span>
         <select id="networkSelect"></select>
@@ -47,6 +83,7 @@
 
       <label class="field">
         <span>Update scheme</span>
+
         <select id="schemeSelect">
           <option value="async">Asynchronous</option>
           <option value="sync">Synchronous</option>
@@ -54,12 +91,20 @@
       </label>
 
       <label class="check-field">
-        <input id="selfLoopToggle" type="checkbox" checked>
+        <input
+          id="selfLoopToggle"
+          type="checkbox"
+          checked
+        >
         <span>Show self-loops</span>
       </label>
+
     </section>
 
+
+    <!-- Network metadata -->
     <section class="meta-strip">
+
       <div>
         <span class="eyebrow">Topology</span>
         <strong id="topologyText">-</strong>
@@ -79,24 +124,35 @@
         <span class="eyebrow">Attractors</span>
         <strong id="attractorText">-</strong>
       </div>
+
     </section>
 
+
+    <!-- Main workspace -->
     <section class="workspace">
 
+      <!-- Signed network -->
       <section class="panel network-panel">
+
         <div class="panel-head">
           <h2>Signed Network</h2>
-          <span id="signLegend">+ activation, - inhibition</span>
+          <span id="signLegend">
+            + activation, - inhibition
+          </span>
         </div>
 
         <svg
           id="networkSvg"
           viewBox="0 0 520 320"
-          aria-label="Signed network diagram">
-        </svg>
+          aria-label="Signed network diagram"
+        ></svg>
+
       </section>
 
+
+      <!-- State transition graph -->
       <section class="panel stg-panel">
+
         <div class="panel-head">
           <h2>STG</h2>
           <span id="edgeCountText">-</span>
@@ -105,17 +161,24 @@
         <svg
           id="stgSvg"
           viewBox="0 0 720 520"
-          aria-label="State transition graph">
-        </svg>
+          aria-label="State transition graph"
+        ></svg>
+
       </section>
 
+
+      <!-- Truth table -->
       <section class="panel table-panel">
+
         <div class="panel-head">
           <h2>Truth Table</h2>
-          <span>state order: 00, 01, 10, 11</span>
+          <span>
+            state order: 00, 01, 10, 11
+          </span>
         </div>
 
         <div class="table-wrap">
+
           <table>
             <thead>
               <tr>
@@ -128,7 +191,9 @@
 
             <tbody id="truthBody"></tbody>
           </table>
+
         </div>
+
       </section>
 
     </section>
