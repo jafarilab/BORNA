@@ -1,17 +1,14 @@
-```css
 :root {
   --ink: #152033;
   --muted: #667085;
   --line: #d7deea;
   --panel: #ffffff;
   --page: #f6f8fb;
-
   --blue: #4285f4;
   --red: #db4437;
   --yellow: #f4b400;
   --green: #0f9d58;
   --purple: #8b5cf6;
-
   --soft-blue: #dceaff;
   --soft-green: #dff4e8;
   --soft-yellow: #fff6d8;
@@ -25,15 +22,7 @@ body {
   margin: 0;
   color: var(--ink);
   background: var(--page);
-
-  font-family:
-    Inter,
-    ui-sans-serif,
-    system-ui,
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    sans-serif;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
 .app-shell {
@@ -42,35 +31,12 @@ body {
   padding: 20px 0 28px;
 }
 
-
-/* =========================
-   Header
-   ========================= */
-
 .topbar {
   display: flex;
   justify-content: space-between;
   gap: 20px;
-  align-items: center;
+  align-items: end;
   margin-bottom: 16px;
-}
-
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 11px;
-  min-width: 0;
-}
-
-.logo {
-  width: 42px;
-  height: 42px;
-  object-fit: contain;
-  flex-shrink: 0;
-}
-
-.brand-text {
-  min-width: 0;
 }
 
 h1,
@@ -91,18 +57,12 @@ h1 {
   font-size: 14px;
 }
 
-
-/* =========================
-   Mode Switch
-   ========================= */
-
 .mode-switch {
   display: inline-flex;
   border: 1px solid var(--line);
   background: var(--panel);
   border-radius: 8px;
   padding: 3px;
-  flex-shrink: 0;
 }
 
 .seg {
@@ -120,11 +80,6 @@ h1 {
   color: white;
 }
 
-
-/* =========================
-   Controls
-   ========================= */
-
 .control-band,
 .meta-strip {
   background: var(--panel);
@@ -134,14 +89,7 @@ h1 {
 
 .control-band {
   display: grid;
-
-  grid-template-columns:
-    minmax(280px, 1.8fr)
-    minmax(160px, 1fr)
-    minmax(160px, 1fr)
-    minmax(160px, 0.8fr)
-    auto;
-
+  grid-template-columns: minmax(280px, 1.8fr) minmax(160px, 1fr) minmax(160px, 1fr) minmax(160px, 0.8fr) auto;
   gap: 12px;
   align-items: end;
   padding: 14px;
@@ -165,15 +113,11 @@ h1 {
 select {
   width: 100%;
   min-height: 40px;
-
   border: 1px solid var(--line);
   border-radius: 7px;
-
   padding: 0 12px;
-
   color: var(--ink);
   background: white;
-
   font-size: 14px;
 }
 
@@ -182,7 +126,6 @@ select {
   grid-auto-columns: auto;
   align-items: center;
   justify-content: start;
-
   min-height: 40px;
   padding-bottom: 2px;
 }
@@ -196,20 +139,9 @@ select {
   display: none;
 }
 
-
-/* =========================
-   Meta Strip
-   ========================= */
-
 .meta-strip {
   display: grid;
-
-  grid-template-columns:
-    1.1fr
-    1fr
-    1fr
-    1.1fr;
-
+  grid-template-columns: 1.1fr 1fr 1fr 1.1fr;
   gap: 0;
   margin: 12px 0;
   overflow: hidden;
@@ -228,26 +160,14 @@ select {
 .meta-strip strong {
   display: block;
   margin-top: 4px;
-
   font-size: 15px;
   line-height: 1.25;
-
   overflow-wrap: anywhere;
 }
 
-
-/* =========================
-   Workspace
-   ========================= */
-
 .workspace {
   display: grid;
-
-  grid-template-columns:
-    minmax(280px, 0.85fr)
-    minmax(480px, 1.55fr)
-    minmax(320px, 0.95fr);
-
+  grid-template-columns: minmax(280px, 0.85fr) minmax(480px, 1.55fr) minmax(320px, 0.95fr);
   gap: 12px;
   align-items: stretch;
 }
@@ -256,20 +176,16 @@ select {
   background: var(--panel);
   border: 1px solid var(--line);
   border-radius: 8px;
-
   min-width: 0;
   overflow: hidden;
 }
 
 .panel-head {
   min-height: 52px;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   gap: 10px;
-
   border-bottom: 1px solid var(--line);
   padding: 12px 14px;
 }
@@ -278,11 +194,6 @@ h2 {
   font-size: 16px;
   letter-spacing: 0;
 }
-
-
-/* =========================
-   SVG
-   ========================= */
 
 svg {
   display: block;
@@ -298,11 +209,6 @@ svg {
   aspect-ratio: 18 / 13;
 }
 
-
-/* =========================
-   Truth Table
-   ========================= */
-
 .table-wrap {
   overflow: auto;
 }
@@ -316,11 +222,8 @@ table {
 th,
 td {
   text-align: left;
-
   padding: 12px 14px;
-
   border-bottom: 1px solid var(--line);
-
   white-space: nowrap;
 }
 
@@ -329,11 +232,6 @@ th {
   color: var(--muted);
   background: #fbfcfe;
 }
-
-
-/* =========================
-   Network / STG Nodes
-   ========================= */
 
 .node {
   fill: white;
@@ -355,17 +253,10 @@ th {
 .state-label,
 .net-label {
   fill: var(--ink);
-
   font-weight: 800;
-
   text-anchor: middle;
   dominant-baseline: central;
 }
-
-
-/* =========================
-   Edges
-   ========================= */
 
 .edge {
   fill: none;
@@ -393,11 +284,6 @@ th {
   stroke-dasharray: 6 5;
 }
 
-
-/* =========================
-   Regulation
-   ========================= */
-
 .reg-pos {
   stroke: var(--green);
 }
@@ -414,20 +300,13 @@ th {
 
 .edge-label {
   fill: #101828;
-
   font-size: 14px;
   font-weight: 800;
-
   paint-order: stroke;
   stroke: white;
   stroke-width: 5px;
   stroke-linejoin: round;
 }
-
-
-/* =========================
-   Responsive Layout
-   ========================= */
 
 @media (max-width: 1120px) {
   .control-band,
@@ -446,50 +325,7 @@ th {
   }
 
   .topbar {
-    align-items: flex-start;
+    align-items: start;
     flex-direction: column;
   }
-
-  .mode-switch {
-    align-self: flex-start;
-  }
 }
-
-
-/* =========================
-   Mobile
-   ========================= */
-
-@media (max-width: 600px) {
-  .app-shell {
-    width: min(100% - 20px, 1480px);
-    padding-top: 12px;
-  }
-
-  .logo {
-    width: 36px;
-    height: 36px;
-  }
-
-  .brand {
-    width: 100%;
-    gap: 10px;
-  }
-
-  h1 {
-    font-size: 21px;
-  }
-
-  .topbar p {
-    font-size: 13px;
-  }
-
-  .mode-switch {
-    width: 100%;
-  }
-
-  .seg {
-    flex: 1;
-  }
-}
-```
