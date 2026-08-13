@@ -46,10 +46,9 @@ body {
   min-width: 0;
 }
 
-/* LOGO TEST: 30px */
 .logo {
-  width: 30px;
-  height: 30px;
+  width: 80px;
+  height: 80px;
   object-fit: contain;
   flex-shrink: 0;
 }
