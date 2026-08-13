@@ -54,13 +54,13 @@ body {
 .brand {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 11px;
   min-width: 0;
 }
 
 .logo {
-  width: 56px;
-  height: 56px;
+  width: 6px;
+  height: 6px;
   object-fit: contain;
   flex-shrink: 0;
 }
@@ -387,7 +387,7 @@ th {
    Responsive Layout
    ========================= */
 
-@media (max-width: 1120px) {
+@media (max-width: 600px) {
   .control-band,
   .meta-strip,
   .workspace {
@@ -424,8 +424,8 @@ th {
   }
 
   .logo {
-    width: 48px;
-    height: 48px;
+    width: 6px;
+    height: 6px;
   }
 
   h1 {
