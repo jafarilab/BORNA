@@ -49,14 +49,14 @@ const GRAPHS_RAW = [
   ["A-|A, A->B, B-|A", [["A", "B"]], [["A", "A"], ["B", "A"]]],
   ["A-|A, A-|B, B->A", [["B", "A"]], [["A", "A"], ["A", "B"]]],
   ["A-|A, A-|B, B-|A", [], [["A", "A"], ["A", "B"], ["B", "A"]]],
-  ["A->A, B->B, A->B", [["A", "A"], ["B", "B"], ["A", "B"]], []],
-  ["A->A, B->B, A-|B", [["A", "A"], ["B", "B"]], [["A", "B"]]],
-  ["A->A, B-|B, A->B", [["A", "A"], ["A", "B"]], [["B", "B"]]],
-  ["A->A, B-|B, A-|B", [["A", "A"]], [["B", "B"], ["A", "B"]]],
-  ["A-|A, B->B, A->B", [["A", "B"], ["B", "B"]], [["A", "A"]]],
-  ["A-|A, B->B, A-|B", [["B", "B"]], [["A", "A"], ["A", "B"]]],
-  ["A-|A, B-|B, A->B", [["A", "B"]], [["A", "A"], ["B", "B"]]],
-  ["A-|A, B-|B, A-|B", [], [["A", "A"], ["B", "B"], ["A", "B"]]],
+  ["A->A, B->B, B->A", [["A", "A"], ["B", "B"], ["B", "A"]], []],
+  ["A->A, B->B, B-|A", [["A", "A"], ["B", "B"]], [["B", "A"]]],
+  ["A->A, B-|B, B->A", [["A", "A"], ["B", "A"]], [["B", "B"]]],
+  ["A-|A, B->B, B-|A", [["B", "B"]], [["A", "A"], ["B", "A"]]],
+  ["A-|A, B->B, B->A", [["B", "A"], ["B", "B"]], [["A", "A"]]],
+  ["A->A, B-|B, B-|A", [["A", "A"]], [["B", "B"], ["B", "A"]]],
+  ["A-|A, B-|B, B->A", [["B", "A"]], [["A", "A"], ["B", "B"]]],
+  ["A-|A, B-|B, B-|A", [], [["A", "A"], ["B", "B"], ["B", "A"]]],
   ["A->A, B->B, A->B, B->A", [["A", "A"], ["B", "B"], ["A", "B"], ["B", "A"]], []],
   ["A->A, B->B, A->B, B-|A", [["A", "A"], ["B", "B"], ["A", "B"]], [["B", "A"]]],
   ["A->A, B->B, A-|B, B-|A", [["A", "A"], ["B", "B"]], [["A", "B"], ["B", "A"]]],
@@ -75,9 +75,12 @@ const CLASS_RULE_SETS = {
   2: ["AA"],
   3: ["AA"],
   4: ["AA", "AO", "OA", "OO"],
-  5: ["AA", "AO"],
-  6: ["AA", "AO"],
-  7: ["AA", "AO", "OO"],
+  // Class 5 has two inputs into A and one input into B in this canonical
+  // ordering, so the second realization must switch A from AND to OR.
+  5: ["AA", "OA"],
+  // Class 6 is displayed in the B-to-A orientation, so the two-input rule is A.
+  6: ["AA", "OA"],
+  7: ["AA", "OA", "OO"],
 };
 const LOGIC_TYPES = {
   AA: ["AND", "AND"],
@@ -397,7 +400,10 @@ function drawNetwork(model) {
       "marker-end": edge.type === "neg" ? "" : `url(#${colorMarker})`,
     });
     svg.appendChild(path);
-    if (edge.type === "neg") drawInhibitionBar(svg, x2 + (dst === "A" ? 50 : -50), y2, 0, 1);
+    if (edge.type === "neg") {
+      const direction = dst === "B" ? 1 : -1;
+      drawInhibitionBar(svg, x2 + (dst === "A" ? 50 : -50), y2, direction, 0);
+    }
   });
 
   ["A", "B"].forEach((node) => {
@@ -411,13 +417,13 @@ function drawNetwork(model) {
 
 function drawInhibitionBar(svg, x, y, dx, dy) {
   const g = svgEl("line", {
-    x1: x - 12 * dy,
-    y1: y - 12 * dx,
-    x2: x + 12 * dy,
-    y2: y + 12 * dx,
+    x1: x + 14 * -dy,
+    y1: y + 14 * dx,
+    x2: x - 14 * -dy,
+    y2: y - 14 * dx,
     stroke: "#db4437",
-    "stroke-width": "4",
-    "stroke-linecap": "round",
+    "stroke-width": "5",
+    "stroke-linecap": "butt",
   });
   svg.appendChild(g);
 }
