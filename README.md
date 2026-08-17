@@ -118,7 +118,7 @@ The repository contains the code used for Boolean rule generation, network enume
 
 BORNA was developed as a companion resource for the associated research study on two-node Boolean network dynamics.
 
-> **[Add manuscript title here]**
+> **Reducing Boolean Networks via Analysis of Dynamic Network Subgraph Behavior**
 
 ## Citation
 
