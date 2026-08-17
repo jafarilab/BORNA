@@ -1,0 +1,40 @@
+BORNA final data regeneration from the code-defined graph/rule catalogue
+======================================================================
+Networks: 89
+Sync retained nonconstant numeric STG features: 20
+Async retained nonconstant numeric STG features: 39
+
+Figure 4: borna_final_figure4_sync_pca_tsne_umap.png
+Figure 5: borna_final_figure5_async_pca_tsne_umap.png
+
+Catalogue PDF: borna_final_sync_async_stg_catalogue_89.pdf
+
+Table 2:
+  Cluster  Stable Fixed-point  Pure Oscillatory  Complex Composite  Hybrid Multimodal  Total
+Cluster_1                   0                 0                 14                  7     21
+Cluster_2                   0                24                  0                  0     24
+Cluster_3                  22                 4                  0                  0     26
+Cluster_4                   0                 0                  9                  9     18
+    Total                  22                28                 23                 16     89
+
+Table 3:
+  Cluster  Single fixed point  Multi-attractor fixed-point  Cyclic / trap dominated  Mixed fixed + trap  Total
+Cluster_1                   0                           25                        0                   0     25
+Cluster_2                   0                            0                       14                   0     14
+Cluster_3                   0                            0                       14                   7     21
+Cluster_4                  29                            0                        0                   0     29
+    Total                  29                           25                       28                   7     89
+
+Sync cluster sizes:
+Cluster
+Cluster_1    21
+Cluster_2    24
+Cluster_3    26
+Cluster_4    18
+
+Async cluster sizes:
+Cluster
+Cluster_1    25
+Cluster_2    14
+Cluster_3    21
+Cluster_4    29

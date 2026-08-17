@@ -1,0 +1,6 @@
+numpy
+pandas
+networkx
+matplotlib
+scikit-learn
+umap-learn==0.5.6

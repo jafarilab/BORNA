@@ -1,0 +1,6 @@
+﻿Cluster,Single fixed point,Multi-attractor fixed-point,Cyclic / trap dominated,Mixed fixed + trap,Total
+Cluster_1,0,25,0,0,25
+Cluster_2,0,0,14,0,14
+Cluster_3,0,0,14,7,21
+Cluster_4,29,0,0,0,29
+Total,29,25,28,7,89
