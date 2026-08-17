@@ -128,7 +128,7 @@ If you use BORNA or the associated network catalogue in your research, please ci
 
 ## License
 
-[Add license information here.]
+CC BY-NC-ND
 
 ## Contact
 
