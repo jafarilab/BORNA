@@ -168,7 +168,7 @@ The application and computational resources are intended to support exploration,
 
 If you use BORNA, the associated network catalogue, or the analysis code in your research, please cite the accompanying publication:
 
-> **[Add publication citation here]**
+> (**Zakeri, Soodabeh and Mohieddin Jafari. “Reducing Boolean Networks via Analysis of Dynamic Network Subgraph Behavior.” (2026).**)[https://doi.org/10.48550/arXiv.2608.19292]
 
 ## License
 
