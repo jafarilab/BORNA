@@ -347,6 +347,29 @@ th {
   stroke-linejoin: round;
 }
 
+.site-footer {
+  margin-top: 18px;
+  padding: 16px 20px;
+  color: var(--muted);
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  font-size: 14px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.site-footer a {
+  color: var(--blue);
+  font-weight: 700;
+  text-underline-offset: 3px;
+}
+
+.site-footer a:hover,
+.site-footer a:focus-visible {
+  color: #1f5fc4;
+}
+
 @media (max-width: 1120px) {
   .control-band,
   .meta-strip,
